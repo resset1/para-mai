@@ -1,0 +1,51 @@
+/* Custom Animations and Rotations */
+.polaroid-tilt-left {
+  transform: rotate(-3deg);
+}
+
+.polaroid-tilt-right {
+  transform: rotate(2deg);
+}
+
+.polaroid-tilt-slight {
+  transform: rotate(1deg);
+}
+
+.floating-heart {
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Base Styles & Backgrounds */
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Background gradient for the Hero section */
+#hero-envelope {
+  background-image:
+    linear-gradient(rgba(255, 252, 245, 0.9), rgba(255, 252, 245, 0.9)),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNnpd2kEcQIjXE-mH2o9RSl93Dhx2IQdoHnxsJ_ddZ6jPqjcGCiHr5kjrWwRHHgF7nQ2sbjdimAbPlFOkBdqGb7oDoNTeGfKgLf7iZW_d5Vbooe2n6i0k_LAvgJCes9sp8--_N_UUAZ4U134U_IaDJf54Ny20gN7K8MeY8qcBdsxIkHqwsQ0wzMl3de944LeSVwu14golkZvrIGxgGR3HnjuywWFiPMdE0RlkoMOto8LN8WaGtuH_bH95CXJM1kBisvimaS9GGA-Pl");
+}
+
+/* Transitions for interactive notes */
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Animación para el modal */
+.modal-active {
+  display: flex !important;
+}
+
+.modal-show-content {
+  transform: scale(1) !important;
+}

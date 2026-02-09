@@ -1,0 +1,399 @@
+<!doctype html>
+<html class="light" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mai ILY ❤️</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec1313",
+              "background-light": "#fdf8f8",
+              "background-dark": "#221010",
+              "accent-pink": "#ffb7b7",
+              cream: "#fffcf5",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Lora", "serif"],
+              handwriting: ["Dancing Script", "cursive"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#181111] dark:text-white transition-colors duration-300"
+  >
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <span
+        class="material-symbols-outlined floating-heart text-primary text-6xl top-10 left-10"
+        >favorite</span
+      >
+      <span
+        class="material-symbols-outlined floating-heart text-primary text-4xl top-40 right-20"
+        >favorite</span
+      >
+      <span
+        class="material-symbols-outlined floating-heart text-primary text-5xl bottom-20 left-1/4"
+        >favorite</span
+      >
+      <span
+        class="material-symbols-outlined floating-heart text-primary text-7xl top-1/2 right-10"
+        >favorite</span
+      >
+      <span
+        class="material-symbols-outlined floating-heart text-primary text-3xl bottom-10 right-1/3"
+        >favorite</span
+      >
+    </div>
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col z-10">
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-4 lg:px-40 flex justify-center py-5">
+          <header
+            class="flex w-full max-w-[960px] items-center justify-between border-b border-solid border-primary/10 px-4 lg:px-10 py-3 bg-white/50 dark:bg-background-dark/50 backdrop-blur-md rounded-full shadow-sm"
+          >
+            <div class="flex items-center gap-4 text-primary">
+              <span class="material-symbols-outlined text-3xl">favorite</span>
+              <h2 class="text-lg font-bold font-serif italic">Mi niña</h2>
+            </div>
+            <div class="flex gap-8 items-center">
+              <nav class="hidden md:flex gap-9">
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#gallery"
+                  >Recuerdos</a
+                >
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#notes"
+                  >Notas</a
+                >
+              </nav>
+              <button
+                class="rounded-full h-10 px-6 bg-primary text-white text-sm font-bold hover:scale-105 transition-all"
+              >
+                Enviar Amor
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div
+          class="px-4 lg:px-40 flex justify-center py-5"
+          id="envelope-section"
+        >
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="@[480px]:p-4">
+              <div
+                id="hero-envelope"
+                class="flex min-h-[520px] flex-col gap-6 bg-cream dark:bg-background-dark/80 rounded-xl items-center justify-center p-8 border-2 border-dashed border-primary/20 shadow-xl relative overflow-hidden"
+              >
+                <div class="flex flex-col gap-4 text-center z-10">
+                  <span class="text-primary font-handwriting text-3xl"
+                    >Para mi persona favorita</span
+                  >
+                  <h1
+                    class="text-[#221010] dark:text-white text-4xl font-black font-serif @[480px]:text-6xl"
+                  >
+                    Un Mensaje Especial
+                  </h1>
+                  <h2
+                    class="text-[#554444] dark:text-gray-300 text-base max-w-lg mx-auto"
+                  >
+                    Toca mi corazón para descubrir lo que hay en el.
+                  </h2>
+                </div>
+
+                <div
+                  id="open-envelope-btn"
+                  class="relative mt-8 group cursor-pointer transition-transform active:scale-95"
+                >
+                  <div
+                    class="w-64 h-48 bg-white dark:bg-gray-800 rounded-lg shadow-2xl relative border border-gray-100 flex items-center justify-center"
+                  >
+                    <div
+                      class="absolute inset-0 border-t-[96px] border-t-transparent border-l-[128px] border-l-gray-50 dark:border-l-gray-700 border-r-[128px] border-r-gray-50 dark:border-r-gray-700 border-b-[96px] border-b-white dark:border-b-gray-800 rounded-lg"
+                    ></div>
+                    <div
+                      class="w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center z-20 transform group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <span
+                        class="material-symbols-outlined text-white text-3xl"
+                        >favorite</span
+                      >
+                    </div>
+                  </div>
+                  <div class="absolute -bottom-4 left-1/2 -translate-x-1/2">
+                    <div
+                      class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-lg flex items-center gap-2"
+                    >
+                      <span>Abrir Sobre</span>
+                      <span class="material-symbols-outlined">mail</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-4 lg:px-40 flex justify-center py-10" id="story">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <div class="p-4">
+              <div
+                class="bg-white dark:bg-background-dark/60 p-10 lg:p-16 rounded-xl shadow-2xl border border-primary/5 relative overflow-hidden"
+              >
+                <div class="absolute top-0 right-0 p-6 opacity-20">
+                  <span class="material-symbols-outlined text-8xl text-primary"
+                    >format_quote</span
+                  >
+                </div>
+                <div class="max-w-2xl mx-auto">
+                  <p class="text-primary font-handwriting text-2xl mb-6">
+                    Mi niña mai,
+                  </p>
+                  <div
+                    class="space-y-6 text-lg leading-relaxed text-[#181111] dark:text-gray-200 font-serif italic"
+                  >
+                    <p>
+                      Desde el momento en que entraste en mi vida, cada día se
+                      ha sentido como una página de un libro que nunca quiero
+                      dejar de leer. Tu risa es mi melodía favorita y tu mirada
+                      es el refugio donde siempre encuentro paz.
+                    </p>
+                    <p>
+                      Este San Valentín no es solo una fecha, es el recordatorio
+                      de lo afortunado que soy por compartir mi tiempo contigo.
+                      Gracias por ser mi apoyo, mi confidente y el amor de mi
+                      vida.
+                    </p>
+                    <p>Te amo más de lo que las palabras pueden expresar.</p>
+                  </div>
+                  <p
+                    class="mt-12 text-primary font-handwriting text-3xl text-right"
+                  >
+                    Por siempre tuyo, <br />Yo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-4 lg:px-40 flex justify-center py-10" id="gallery">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <h2
+              class="text-[#181111] dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5 font-serif text-center"
+            >
+              Nuestra Pared de Momentos
+            </h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4"
+            >
+              <div
+                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-left hover:rotate-0 hover:scale-105 transition-all duration-300"
+              >
+                <div
+                  class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Recuerdo 1"
+                    class="w-full h-full object-cover"
+                    src="img/2.jpeg"
+                  />
+                </div>
+                <p class="font-handwriting text-center text-xl text-gray-700">
+                  Primer 31D Juntos...
+                </p>
+              </div>
+              <div
+                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-right hover:rotate-0 hover:scale-105 transition-all duration-300"
+              >
+                <div
+                  class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Recuerdo 2"
+                    class="w-full h-full object-cover"
+                    src="img/3.jpeg"
+                  />
+                </div>
+                <p class="font-handwriting text-center text-xl text-gray-700">
+                  Amigo por favor responde...
+                </p>
+              </div>
+              <div
+                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-slight hover:rotate-0 hover:scale-105 transition-all duration-300"
+              >
+                <div
+                  class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Recuerdo 3"
+                    class="w-full h-full object-cover"
+                    src="img/1.jpeg"
+                  />
+                </div>
+                <p class="font-handwriting text-center text-xl text-gray-700">
+                  Los yogurs que detestamos...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-4 lg:px-40 flex justify-center py-10" id="notes">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <h2
+              class="text-[#181111] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-serif"
+            >
+              Pequeñas Notas de Amor
+            </h2>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div
+                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
+                  >favorite</span
+                >
+                <div
+                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                >
+                  <p class="font-handwriting text-sm">
+                    Amo cuando me dices que estoy hermoso.
+                  </p>
+                  <div
+                    class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-primary"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
+                  >favorite</span
+                >
+                <div
+                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                >
+                  <p class="font-handwriting text-sm">
+                    Tu risa y tu sinceridad es lo que conmueve mi corazon.
+                  </p>
+                  <div
+                    class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-primary"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
+                  >favorite</span
+                >
+                <div
+                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                >
+                  <p class="font-handwriting text-sm">
+                    Pensar junto a ti cada plan que vamos a tener es mi momento
+                    favorito.
+                  </p>
+                  <div
+                    class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-primary"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer
+          class="mt-auto px-4 lg:px-40 py-10 flex flex-col items-center gap-6 border-t border-primary/10 bg-white/30 dark:bg-background-dark/30 backdrop-blur-sm"
+        >
+          <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined">heart_plus</span>
+            <p class="font-serif italic font-bold">
+              Hecho con todo mi amor para ti
+            </p>
+          </div>
+          <p class="text-gray-400 text-xs">Con ❤️ y ☕ Te amo por siempre.</p>
+        </footer>
+      </div>
+    </div>
+
+    <div
+      id="loveModal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all"
+    >
+      <div
+        id="modalContent"
+        class="relative w-full max-w-md transform overflow-hidden rounded-2xl bg-cream dark:bg-background-dark p-8 text-center shadow-2xl border-2 border-primary/20 scale-95 transition-transform duration-300"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-gray-400 hover:text-primary transition-colors"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div
+          class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10"
+        >
+          <span class="material-symbols-outlined text-5xl text-primary"
+            >auto_awesome</span
+          >
+        </div>
+        <h3 class="font-serif text-3xl font-bold text-primary italic mb-4">
+          ¡Sorpresa, Mai!
+        </h3>
+        <div
+          class="space-y-4 font-serif text-lg text-gray-700 dark:text-gray-200 italic"
+        >
+          <p>"Eres el 'hola' más lindo y el 'adiós' más difícil de mi vida."</p>
+          <p>
+            Cada momento a tu lado es un regalo que atesoro con todo mi ser.
+          </p>
+        </div>
+        <button
+          onclick="closeModal()"
+          class="mt-8 w-full rounded-full bg-primary px-6 py-3 font-bold text-white shadow-lg hover:scale-105 transition-all"
+        >
+          Te amo mucho ❤️
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
