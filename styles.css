@@ -49,3 +49,16 @@ body {
 .modal-show-content {
   transform: scale(1) !important;
 }
+
+/* Fuerza la visibilidad cuando se hace click en móvil */
+.note-card.active .note-content {
+  visibility: visible;
+  opacity: 1;
+  bottom: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Opcional: animación de latido para que sepan que es clickeable */
+.note-card {
+  touch-action: manipulation;
+}

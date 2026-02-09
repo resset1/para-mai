@@ -23,12 +23,6 @@
               serif: ["Lora", "serif"],
               handwriting: ["Dancing Script", "cursive"],
             },
-            borderRadius: {
-              DEFAULT: "1rem",
-              lg: "2rem",
-              xl: "3rem",
-              full: "9999px",
-            },
           },
         },
       };
@@ -42,6 +36,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -55,18 +50,17 @@
       >
       <span
         class="material-symbols-outlined floating-heart text-primary text-4xl top-40 right-20"
+        style="animation-delay: 1s"
         >favorite</span
       >
       <span
         class="material-symbols-outlined floating-heart text-primary text-5xl bottom-20 left-1/4"
+        style="animation-delay: 2s"
         >favorite</span
       >
       <span
         class="material-symbols-outlined floating-heart text-primary text-7xl top-1/2 right-10"
-        >favorite</span
-      >
-      <span
-        class="material-symbols-outlined floating-heart text-primary text-3xl bottom-10 right-1/3"
+        style="animation-delay: 1.5s"
         >favorite</span
       >
     </div>
@@ -81,25 +75,24 @@
               <span class="material-symbols-outlined text-3xl">favorite</span>
               <h2 class="text-lg font-bold font-serif italic">Mi niña</h2>
             </div>
-            <div class="flex gap-8 items-center">
-              <nav class="hidden md:flex gap-9">
-                <a
-                  class="text-sm font-medium hover:text-primary transition-colors"
-                  href="#gallery"
-                  >Recuerdos</a
-                >
-                <a
-                  class="text-sm font-medium hover:text-primary transition-colors"
-                  href="#notes"
-                  >Notas</a
-                >
-              </nav>
-              <button
-                class="rounded-full h-10 px-6 bg-primary text-white text-sm font-bold hover:scale-105 transition-all"
+            <nav class="hidden md:flex gap-9">
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#gallery"
+                >Recuerdos</a
               >
-                Enviar Amor
-              </button>
-            </div>
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#notes"
+                >Notas</a
+              >
+            </nav>
+            <button
+              onclick="openModal()"
+              class="rounded-full h-10 px-6 bg-primary text-white text-sm font-bold hover:scale-105 transition-all"
+            >
+              Sorpresa
+            </button>
           </header>
         </div>
 
@@ -125,12 +118,13 @@
                   <h2
                     class="text-[#554444] dark:text-gray-300 text-base max-w-lg mx-auto"
                   >
-                    Toca mi corazón para descubrir lo que hay en el.
+                    Toca mi corazón para descubrir lo que hay en él.
                   </h2>
                 </div>
 
                 <div
                   id="open-envelope-btn"
+                  onclick="openModal()"
                   class="relative mt-8 group cursor-pointer transition-transform active:scale-95"
                 >
                   <div
@@ -152,8 +146,10 @@
                     <div
                       class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-lg flex items-center gap-2"
                     >
-                      <span>Abrir Sobre</span>
-                      <span class="material-symbols-outlined">mail</span>
+                      <span>Abreme</span>
+                      <span class="material-symbols-outlined"
+                        >card_giftcard</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -185,14 +181,12 @@
                     <p>
                       Desde el momento en que entraste en mi vida, cada día se
                       ha sentido como una página de un libro que nunca quiero
-                      dejar de leer. Tu risa es mi melodía favorita y tu mirada
-                      es el refugio donde siempre encuentro paz.
+                      dejar de leer...
                     </p>
                     <p>
-                      Este San Valentín no es solo una fecha, es el recordatorio
-                      de lo afortunado que soy por compartir mi tiempo contigo.
-                      Gracias por ser mi apoyo, mi confidente y el amor de mi
-                      vida.
+                      No tienes idea de lo afortunado que soy por compartir mi
+                      tiempo contigo. Gracias por ser mi apoyo, mi confidente y
+                      mi amor sincero.
                     </p>
                     <p>Te amo más de lo que las palabras pueden expresar.</p>
                   </div>
@@ -220,7 +214,7 @@
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4"
             >
               <div
-                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-left hover:rotate-0 hover:scale-105 transition-all duration-300"
+                class="bg-white p-4 pb-12 shadow-xl transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
               >
                 <div
                   class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
@@ -229,6 +223,10 @@
                     alt="Recuerdo 1"
                     class="w-full h-full object-cover"
                     src="img/2.jpeg"
+                    onerror="
+                      this.src =
+                        'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=500'
+                    "
                   />
                 </div>
                 <p class="font-handwriting text-center text-xl text-gray-700">
@@ -236,7 +234,7 @@
                 </p>
               </div>
               <div
-                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-right hover:rotate-0 hover:scale-105 transition-all duration-300"
+                class="bg-white p-4 pb-12 shadow-xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
               >
                 <div
                   class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
@@ -245,6 +243,10 @@
                     alt="Recuerdo 2"
                     class="w-full h-full object-cover"
                     src="img/3.jpeg"
+                    onerror="
+                      this.src =
+                        'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=500'
+                    "
                   />
                 </div>
                 <p class="font-handwriting text-center text-xl text-gray-700">
@@ -252,7 +254,7 @@
                 </p>
               </div>
               <div
-                class="bg-white p-4 pb-12 shadow-xl polaroid-tilt-slight hover:rotate-0 hover:scale-105 transition-all duration-300"
+                class="bg-white p-4 pb-12 shadow-xl transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300"
               >
                 <div
                   class="w-full aspect-square bg-gray-200 overflow-hidden mb-4"
@@ -261,6 +263,10 @@
                     alt="Recuerdo 3"
                     class="w-full h-full object-cover"
                     src="img/1.jpeg"
+                    onerror="
+                      this.src =
+                        'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=500'
+                    "
                   />
                 </div>
                 <p class="font-handwriting text-center text-xl text-gray-700">
@@ -276,20 +282,21 @@
             class="layout-content-container flex flex-col max-w-[960px] flex-1"
           >
             <h2
-              class="text-[#181111] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-serif"
+              class="text-[#181111] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-serif text-center"
             >
-              Pequeñas Notas de Amor
+              Pequeñas Notas de Amor (Tócalas)
             </h2>
             <div class="flex flex-wrap gap-4 p-4">
               <div
-                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+                onclick="toggleNote(this)"
+                class="note-card group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 cursor-pointer flex-1 min-w-[200px]"
               >
                 <span
                   class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
                   >favorite</span
                 >
                 <div
-                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                  class="note-content absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl z-30"
                 >
                   <p class="font-handwriting text-sm">
                     Amo cuando me dices que estoy hermoso.
@@ -300,17 +307,18 @@
                 </div>
               </div>
               <div
-                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+                onclick="toggleNote(this)"
+                class="note-card group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 cursor-pointer flex-1 min-w-[200px]"
               >
                 <span
                   class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
                   >favorite</span
                 >
                 <div
-                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                  class="note-content absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl z-30"
                 >
                   <p class="font-handwriting text-sm">
-                    Tu risa y tu sinceridad es lo que conmueve mi corazon.
+                    Tu risa y tu sinceridad es lo que conmueve mi corazón.
                   </p>
                   <div
                     class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-primary"
@@ -318,14 +326,15 @@
                 </div>
               </div>
               <div
-                class="group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 transition-all cursor-help flex-1 min-w-[200px]"
+                onclick="toggleNote(this)"
+                class="note-card group relative flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-primary/10 hover:border-primary/40 cursor-pointer flex-1 min-w-[200px]"
               >
                 <span
                   class="material-symbols-outlined text-primary text-4xl group-hover:scale-125 transition-transform"
                   >favorite</span
                 >
                 <div
-                  class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl transition-all duration-300 z-30"
+                  class="note-content absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 bottom-full mb-4 w-48 p-3 bg-primary text-white text-xs rounded-lg shadow-xl z-30"
                 >
                   <p class="font-handwriting text-sm">
                     Pensar junto a ti cada plan que vamos a tener es mi momento
@@ -360,7 +369,7 @@
     >
       <div
         id="modalContent"
-        class="relative w-full max-w-md transform overflow-hidden rounded-2xl bg-cream dark:bg-background-dark p-8 text-center shadow-2xl border-2 border-primary/20 scale-95 transition-transform duration-300"
+        class="relative w-full max-w-md transform scale-95 transition-transform duration-300 rounded-2xl bg-cream dark:bg-background-dark p-8 text-center shadow-2xl border-2 border-primary/20"
       >
         <button
           onclick="closeModal()"
@@ -394,6 +403,8 @@
         </button>
       </div>
     </div>
+
     <script src="script.js"></script>
+    <script src="scriptNotas.js"></script>
   </body>
 </html>
